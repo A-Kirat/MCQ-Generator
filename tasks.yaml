@@ -1,0 +1,20 @@
+text_analyist_task:
+  description: >
+    Get  the important in fromation from  the text .
+    The text analyist  agent will analyise the text  return the important infromation.
+    Your final answer MUST be clear and accurate based on the text.
+
+    Here is the text: {input}
+  expected_output: >
+    Bullet points of the information analysed .
+  agent: text_analyist_agent
+
+
+question_generator_task:
+  description: >
+    Use the infromation  got from the text analyst agent and create questions 
+    Make sure that  every question created from the has 4 choices where exactly one choice is true while the rest are false.
+  expected_output: >
+     html  tags format for  A list of questions where under each question 4 choices and after that the correct answer is shown as a html  tags
+     where questions are colored in red and choices with blue and the correct answer with green 
+  agent: question_generator_agent
